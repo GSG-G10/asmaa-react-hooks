@@ -10,13 +10,13 @@ function ArtworkNavbar () {
           <Nav>
           <ul className="navList">
             <li className="listItem">
-            <Link to="/">Home</Link>
+            <Link to="/" className="navLink">Home</Link>
             </li>
             <li>
-              <Link to="/draw">Draw Art</Link>
+              <Link to="/draw" className="navLink">Draw Art</Link>
             </li>
             <li>
-              <Link to="/myart">My Art</Link>
+              <Link to="/myart" className="navLink">My Art</Link>
             </li>
           </ul>
         </Nav>
