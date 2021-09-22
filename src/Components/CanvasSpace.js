@@ -1,7 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
+// import useLocalStorage from "../utils/useLocalStorage";
 
 export function CanvasSpace() {
   const [isDrawing, setIsDrawing] = useState(false)
+  const [drawingUrl, setDrawingUrl] = useState("");
+  // const [myDrawing, setMyDrawing] = useState();
   const canvasRef = useRef(null);
   const contextRef = useRef(null);
 
@@ -48,10 +51,18 @@ export function CanvasSpace() {
     context.fillRect(0, 0, canvas.width, canvas.height)
   }
 
+  const saveDrawing = () => {
+    const canvas = canvasRef.current;
+    setDrawingUrl(canvas.toDataURL("image/jpeg"));
+    console.log(drawingUrl);
+    // const [myDrawing, setDrawing] = useLocalStorage('mydrawing', drawingUrl);
+    // setImage(myDrawing);
+  }
 
   return (
     <>
     <button onClick={clearCanvas}>Clear</button>
+    <button onClick={saveDrawing}>Save</button>
     <canvas
       onMouseDown={startDrawing}
       onMouseUp={finishDrawing}

@@ -6,7 +6,7 @@ function ArtworkNavbar () {
   return(
     <header>
         <Navbar bg="dark" variant="dark">
-          <Navbar.Brand className="brand">Artly</Navbar.Brand>
+          <Navbar.Brand className="brand">Artlelo</Navbar.Brand>
           <Nav>
           <ul className="navList">
             <li className="listItem">
