@@ -1,6 +1,6 @@
 export const getArtworks = () => {
   const url =
-    "https://api.artic.edu/api/v1/artworks/search?q=nature&limit=25&fields=id,title,image_id,thumbnail";
+    "https://api.artic.edu/api/v1/artworks/search?q=painting&limit=30&fields=id,title,image_id,thumbnail";
   return fetch(url)
     .then((res) => res.json())
     .catch((err) => {
