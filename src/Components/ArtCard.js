@@ -1,5 +1,6 @@
 import { Row, Col, Card, Spinner } from "react-bootstrap";
 import { imageUrl } from "../utils/getArtworks";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function ArtCard ({ results, loading}) {
   
@@ -21,7 +22,7 @@ function ArtCard ({ results, loading}) {
     <Row>
       {results.map((result) => (
         <Col xs={12} md={4} lg={3} key={result.id}>
-          <Card>
+          <Card className="artCard">
             <Card.Img
               variant="top"
               src={imageUrl(result.image_id, 250)}
