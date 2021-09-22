@@ -7,6 +7,7 @@ import ArtCard from "./Components/ArtCard";
 import { getArtworks } from "./utils/getArtworks";
 import ArtworkNavbar from "./Components/ArtworkNavbar";
 import Landing from "./Components/Landing";
+import { CanvasSpace } from "./Components/CanvasSpace";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -29,7 +30,7 @@ function App() {
       <ArtworkNavbar />
 
       <Switch>
-        <Route path="/">
+        <Route exact path="/">
           <Landing />
           <Container>
             {error ? (
@@ -39,10 +40,10 @@ function App() {
             )}
           </Container>
         </Route>
-        <Route path="/draw">
-
+        <Route exact path="/draw">
+            <CanvasSpace />
         </Route>
-        <Route path="/myart">
+        <Route exact path="/myart">
 
         </Route>
       </Switch>
