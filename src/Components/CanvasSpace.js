@@ -53,9 +53,7 @@ export function CanvasSpace() {
 
   const saveDrawing = () => {
     const canvas = canvasRef.current;
-    setDrawingUrl(canvas.toBlob((blob) => {
-      console.log(URL.createObjectURL(blob))
-    }));
+    setDrawingUrl(canvas.toDataURL("image/jpeg"));
     console.log(drawingUrl);
     localStorage.setItem('myArt', JSON.stringify(drawingUrl))
   }
