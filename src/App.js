@@ -8,6 +8,7 @@ import { getArtworks } from "./utils/getArtworks";
 import ArtworkNavbar from "./Components/ArtworkNavbar";
 import Landing from "./Components/Landing";
 import { CanvasSpace } from "./Components/CanvasSpace";
+import MyArt from "./Components/MyArt";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -41,10 +42,10 @@ function App() {
           </Container>
         </Route>
         <Route exact path="/draw">
-            <CanvasSpace />
+          <CanvasSpace />
         </Route>
         <Route exact path="/myart">
-
+          <MyArt />
         </Route>
       </Switch>
     </Router>
