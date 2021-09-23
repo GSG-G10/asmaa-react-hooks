@@ -1,10 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
-// import useLocalStorage from "../utils/useLocalStorage";
 
 export function CanvasSpace() {
   const [isDrawing, setIsDrawing] = useState(false)
   const [drawingUrl, setDrawingUrl] = useState("");
-  // const [myDrawing, setMyDrawing] = useState();
+
+  //  a way to access the DOM(canvas).
   const canvasRef = useRef(null);
   const contextRef = useRef(null);
 
@@ -55,8 +55,7 @@ export function CanvasSpace() {
     const canvas = canvasRef.current;
     setDrawingUrl(canvas.toDataURL("image/jpeg"));
     console.log(drawingUrl);
-    // const [myDrawing, setDrawing] = useLocalStorage('mydrawing', drawingUrl);
-    // setImage(myDrawing);
+    localStorage.setItem('myArt', JSON.stringify(drawingUrl))
   }
 
   return (
